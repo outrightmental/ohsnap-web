@@ -1,0 +1,53 @@
+@(message: String)
+
+@main("Select a friend") {
+
+<div class="jumbotron">
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>choose a friend from facebook</h1>
+        </div>
+    </div>
+
+</div>
+
+<div class="container friends">
+    <!-- Example row of columns -->
+
+    <div class="row friend">
+        <div class="col-sm-3 col-md-1">
+            <a href="/friends/1">
+                <img src="/assets/images/avatar/dave.png">
+            </a>
+        </div>
+        <div class="col-sm-9 col-md-11">
+            <h1>Dave</h1>
+
+            <p>Lorem ipsum dolor sit amet</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row friend">
+        <div class="col-sm-3 col-md-1">
+            <a href="/friends/2">
+                <img src="/assets/images/avatar/lisa.png">
+            </a>
+        </div>
+        <div class="col-sm-9 col-md-11">
+            <h1>Lisa</h1>
+
+            <p>Lorem ipsum dolor sit amet</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <footer>
+        <p>&copy; Band of Horses 2014</p>
+    </footer>
+</div>
+
+}
