@@ -39,13 +39,44 @@ img {
     background-size:100% auto;
 }
 
+#friend_view.hate {
+    background-image:url(../images/bg-hate.gif);
+    background-size:auto 100%;
+    background-repeat: repeat-x;
+}
+
+#friend_view.love {
+    background-image:url(../images/bg-love.gif);
+    background-repeat: repeat;
+}
 
 #friend_view.hate #switch {
     background-image:url(../images/switch-main-2.gif);
 }
 
+#friend_view.love .block {
+    background:rgba(255,255,255,0.62);
+    padding:10px;
+    color:#000;
+    font-family: 'Indie Flower', cursive;
+}
 
+#friend_view.hate .block {
+    background:rgba(0,0,0,0.62);
+    padding:10px;
+    color:#fff;
+    font-family: 'Metal Mania', cursive;
+}
 
+#friend_view .block .headline {
+    font-size:24pt;
+    font-weight:bold;
+}
+
+#friend_view .block .text {
+    font-size:24pt;
+    font-weight:normal;
+}
 
 
 

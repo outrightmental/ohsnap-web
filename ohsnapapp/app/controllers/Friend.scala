@@ -18,16 +18,16 @@ object Friend extends Controller {
         // Love Friend 1 "Lisa"
         Array(
           Module("stable", "beautiful home for horsies!!", "stable-love.gif"),
-          Module("kiss", "Love knows no boundaries!", "kiss-love.gif"),
-          Module("horses", "Get it girl!", "horses-love.gif")
+          Module("kiss", "Love knows no boundaries!", "kiss-love.jpg"),
+          Module("horse", "Get it girl!", "horse-love.jpg")
         )
 
       } else {
         // Hate Friend 1 "Lisa"
         Array(
           Module("stable", "bet you fuckin live in there", "stable-hate.gif"),
-          Module("kiss", "Sounds like a dumb as balls story", "kiss-hate.gif"),
-          Module("horses", "ugggghhhhhhhh", "horses-hate.gif")
+          Module("kiss", "Sounds like a dumb as balls story", "kiss-hate.jpg"),
+          Module("horse", "ugggghhhhhhhh", "horse-hate.png")
         )
 
       }
@@ -38,17 +38,17 @@ object Friend extends Controller {
       if (attitude.equals("love")) {
         // Love Friend 2 "Dave"
         Array(
-          Module("volunteer", "Cares about his community!", "volunteer-love.gif"),
-          Module("harvard", "Worked hard to get into a good school.", "harvard-love.gif"),
-          Module("nasa", "Practically achieving the American dream by being an astronaut", "nasa-love.gif")
+          Module("volunteer", "Cares about his community!", "volunteer-love.jpg"),
+          Module("harvard", "Worked hard to get into a good school.", "harvard-love.jpg"),
+          Module("nasa", "Practically achieving the American dream by being an astronaut", "nasa-love.jpg")
         )
 
       } else {
         // Hate Friend 2 "Dave"
         Array(
-          Module("volunteer", "only volunteering for the pussy", "volunteer-hate.gif"),
+          Module("volunteer", "only volunteering for the pussy", "volunteer-hate.jpg"),
           Module("harvard", "Didn't Harvard just come out with a study that everyone there SUCKS?!!?", "harvard-hate.gif"),
-          Module("nasa", "No way this fucker didn't cheat his way into space", "nasa-hate.gif")
+          Module("nasa", "No way this fucker didn't cheat his way into space", "nasa-hate.jpg")
         )
 
       }
@@ -67,10 +67,10 @@ object Friend extends Controller {
   def writeBlocks(arr: Array[Module]) = {
     val sb = new StringBuilder()
 
-    arr.foreach(x => sb.append("<div class=\"col-xs-6 col-sm-3 col-md-2\">" +
-      "<h1>" + x.keyword + "</h1>" +
+    arr.foreach(x => sb.append("<div class=\"block col-xs-6 col-sm-3 col-md-2\">" +
+      "<p class=\"headline\">" + x.keyword + "</p>" +
       "<img src=\"/assets/images/friends/" + x.image_filename + "\" />" +
-      "<h2>" + x.text + "</h2>" +
+      "<p class=\"text\">" + x.text + "</p>" +
       "</div>"))
 
     sb.toString()
