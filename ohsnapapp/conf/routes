@@ -9,7 +9,13 @@ GET     /                           controllers.Application.index
 GET     /friends                    controllers.Friend.index
 
 # View a friend
-GET     /friends/*id                controllers.Friend.view(id)
+GET     /friends/*id                controllers.Friend.view(attitude="love",id)
+
+# View a friend (love)
+GET     /love/*id                   controllers.Friend.view(attitude="love",id)
+
+# View a friend (hate)
+GET     /hate/*id                   controllers.Friend.view(attitude="hate",id)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

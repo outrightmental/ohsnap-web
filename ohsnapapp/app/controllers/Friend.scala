@@ -9,8 +9,10 @@ object Friend extends Controller {
     Ok(views.html.friend_index("Please select a friend."))
   }
 
-  def view(id:String) = Action {
-    Ok(views.html.friend_view("Here is a picure of your friend " + id))
+  def view(attitude:String,id:String) = Action {
+    Ok(views.html.friend_view(attitude,id))
   }
+
+  def oppositeOf(attitude:String): String = if (attitude.equals("love")) { "hate" } else { "love" }
 
 }

@@ -1,4 +1,4 @@
-@(message: String)
+@(attitude: String,id: String)
 
 @main("Select a friend") {
 
@@ -27,14 +27,14 @@
     </div>
 </div>
 
-<div id="friend_view" class="container">
+<div id="friend_view" class="container @attitude">
     <!-- Example row of columns -->
     <div class="row">
         <div class="col-sm-3 col-md-4">
             &nbsp;
         </div>
         <div class="col-sm-6 col-md-4">
-            <a id="switch" href="javascript:$('#friend_view').toggleClass('hate')">&nbsp;</a>
+            <a id="switch" href="/@Friend.oppositeOf(attitude)/@id">&nbsp;</a>
         </div>
         <div class="col-sm-3 col-md-4">
             &nbsp;
