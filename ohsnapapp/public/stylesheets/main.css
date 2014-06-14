@@ -29,8 +29,20 @@ img {
     background-image:url(../images/apple-touch-icon-precomposed.png);
 }
 
+#friend_view #switch {
+    width:100%;
+    height:400px;
+    display:inline-block;
+    background-image:url(../images/switch-main-1.gif);
+    background-repeat:no-repeat;
+    background-position:top center;
+    background-size:100% auto;
+}
 
 
+#friend_view.hate #switch {
+    background-image:url(../images/switch-main-2.gif);
+}
 
 
 
