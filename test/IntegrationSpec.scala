@@ -19,6 +19,7 @@ class IntegrationSpec extends Specification {
       browser.goTo("http://localhost:" + port)
 
       browser.pageSource must contain("you decide who's cool or lame")
+      browser.pageSource must contain("Login with Facebook")
     }
   }
 }
