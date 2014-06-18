@@ -1,1 +1,18 @@
 language: scala
+scala:
+- 2.10.0
+before_script:
+- "./adjust_config.sh"
+- "./create_version_info.sh"
+script:
+- sbt test
+env:
+  global:
+notifications:
+  email:
+    on_success: never
+    on_failure: change
+deploy:
+  provider: heroku
+  api_key:
+    secure: "POwqhWx4+n5s2rBqKBfilc4F4DgaaDBfubKJU2/8AZPYWrsHtUFbYaCK+0IiDnLE1xoWNa6rmzYPU54vL7Mft8S3BHKQ0jF44JyL/u6IdX0uy5VDVI/nIhSpazMdWA0hB7xEKAkAP0In0g8E2HTN8ysqweRMqZm1+sLWpN/OEYg="
